@@ -19,11 +19,11 @@ class Users extends React.Component {
   render() {
     return (
       <div className="container" >
-        {(this.props.users || []).map(use => {
+        {(this.props.users || []).map(user => {
           return (
             <div className="row">
               <div className="col-6" >
-                {use.name}
+                {user.name}
               </div>
               <div className="col-6">
                 <a href={user.email}> {user.email}</a>
@@ -36,7 +36,7 @@ class Users extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateTopProps = (state) => {
   return {
     users: state.users
   }
@@ -50,4 +50,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Users);
+export default connect(mapStateTopProps, mapDispatchToProps)(Users);
